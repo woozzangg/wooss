@@ -2,7 +2,6 @@ import sys
 sys.stdin = open('input.txt')
 from collections import deque
 
-
 def DFS(v):
     while stack:
         v = stack.pop() # 스택에서 꺼내줌
