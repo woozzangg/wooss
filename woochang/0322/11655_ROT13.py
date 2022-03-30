@@ -17,5 +17,3 @@ for i in range(len(N)):
         pass
 print(*N, sep='')
 # print(len(N))
-
-# 무엇이 틀렸을까..
