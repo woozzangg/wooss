@@ -9,7 +9,6 @@ def DFS(v):
         if visited_dfs[i] == 0 and num[v][i] == 1:
             DFS(i)
 
-
 def BFS(v):
     q = deque()
     q.append(v)

@@ -29,8 +29,6 @@ def DFS(point):
                     cnt += 1
     return cnt
 
-
-
 # 기본 입출력 및 사각형 그려주기
 M, N, K = map(int, input().split()) # 세로가 M 가로가 N 사각형 개수가 3
 draw = [list(map(int, input().split())) for _ in range(K)]
