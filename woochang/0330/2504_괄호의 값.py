@@ -23,7 +23,7 @@ for i in range(len(N)):
         else:
             cnt *= 2
             stack.pop()
-    else:
+    else: #]
         if N[i - 1] == '[':
             cnt += 3
             stack.pop()
@@ -36,6 +36,8 @@ for i in range(len(N)):
 if len(stack) == 0:
     print(sum_cnt)
 else: print(0)
+
+
 
 # for문 전에 스택이 없을때 새로운 sum 계산 만들기
 # pop을 맞지않는걸 뺄때 에러
