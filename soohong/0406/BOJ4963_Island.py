@@ -36,9 +36,4 @@ while True:
                     BFS([i, j])
                     cnt += 1
 
-    max_num = 0
-    for i in range(h):
-        if max(visited[i]) > max_num:
-            max_num = max(visited[i])
-
-    print(max_num)
+    print(cnt-1)

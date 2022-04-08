@@ -8,6 +8,7 @@ def solution(n, arr1, arr2):
     arr = ''
     for i in range(n):
         temps = bin(arr1[i] | arr2[i])[2:]
+        # 0b111 5
         if len(temps) < n:
             temps = '0'*(n-len(temps)) + temps
         for j in range(n):

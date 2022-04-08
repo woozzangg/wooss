@@ -13,14 +13,14 @@ def BFS(b):
                 q.append(i)
                 visited[i] = visited[v] + 1
 
+# 기본 입력
 N, M = map(int,input().split()) # 유저의 수(노드), 친구 관계의 수(간선)
 group = [[0] * (N+1) for _ in range(N+1)]
-
 for i in range(M): # 관계 받아오기
     a, b = map(int, input().split())
     group[a][b] = group[b][a] = 1
-result = [0] * (N+1)
 
+result = [0] * (N+1)
 for i in range(1, N+1):
     visited = [0] * (N + 1) # visited 초기화
     BFS(i)
