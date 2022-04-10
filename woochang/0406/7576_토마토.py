@@ -14,7 +14,7 @@ def bfs(a, b):
         ca, cb, cnt = q.popleft()
         for aa,bb in [(-1,0),(1,0),(0,1),(0,-1)]:
             na, nb = ca+aa, cb+bb
-            if visited[na][nb] == False and 0 <= na <N and 0 <= nb < M and arr[na][nb] != -1:
+            if visited[na][nb] == False and 0 <= na <N and 0 <= nb < M and arr[na][nb] == 0 and arr[na][nb] != -1 :
                    # 방문 X           범위 안 ,                    -1 아닌거 not visited[na][nb] and
                 visited[na][nb] = True
                 arr[na][nb] = cnt+1
@@ -26,10 +26,6 @@ def bfs(a, b):
             if arr[i][j] == 0:
                 ans = -1
     print(ans)
-
-
-
-
 
 
 T = int(input())

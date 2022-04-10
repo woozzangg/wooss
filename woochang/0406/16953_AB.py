@@ -1,5 +1,5 @@
-# import sys
-# sys.stdin = open('16953input.txt')
+import sys
+sys.stdin = open('16953input.txt')
 from collections import deque
 
 def bfs():
@@ -15,6 +15,7 @@ def bfs():
             q.append((i * 2, cnt + 1))
         if 10 * i + 1 <= B:
             q.append((10 * i + 1, cnt + 1))
+
 
 
 A, B = map(int, input().split())
