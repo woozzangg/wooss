@@ -26,5 +26,6 @@ for _ in range(100):
 
     if N == 0:
         break
+
 #런타임 에러 (RecursionError)
 # https://help.acmicpc.net/judge/rte/RecursionError

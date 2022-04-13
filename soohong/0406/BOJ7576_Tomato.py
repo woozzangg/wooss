@@ -14,6 +14,7 @@ def BFS():
                 if visited[ni][nj] == 0 and tomato_box[ni][nj] == 0:
                     q.append((ni, nj))
                     visited[ni][nj] = visited[row][col] + 1
+    return visited[row][col]-1
 
 # 기본 입출력 및 선언
 M, N = map(int, input().split())
@@ -27,7 +28,7 @@ for i in range(N):
         if tomato_box[i][j] == 1:
             q.append((i, j))
             visited[i][j] = 1
-BFS()
+print(BFS())
 
 total = 0
 max_num = 0

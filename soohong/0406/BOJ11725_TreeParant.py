@@ -16,6 +16,7 @@ def BFS(root):
 N = int(sys.stdin.readline()) # 노드의 개수
 tree = [[] for _ in range(N+1)]
 visited = [0] * (N+1)
+
 for i in range(N-1):
     a, b = map(int, sys.stdin.readline().split())
     tree[a].append(b)
