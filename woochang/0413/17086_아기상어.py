@@ -13,8 +13,8 @@ def bfs(shark):
     while q:
         n = q.popleft()
         v = visited[n[0]][n[1]]
-        for d in delta:
-            nx, ny = n[0]+d[0] , n[1]+d[1]
+        for dx, dy in delta:
+            nx, ny = n[0]+dx , n[1]+dy
             if 0<=nx<N and 0<=ny<M:
                 if visited[nx][ny] == 0:
                     visited[nx][ny] = v+1
