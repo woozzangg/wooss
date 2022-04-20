@@ -18,5 +18,3 @@ for i in range(N):
             index.append(j)
 print(index)
 print(rank_index)
-for i in range(N,-1,-1):
-    for j in range(N):
