@@ -23,6 +23,7 @@ def bfs():
         if a_1 not in visited and sum(a_1) < n + 1:
             if sum(a_1) == n:
                 ans += 1
+                visited.append(a_2)
             else:
                 visited.append(a_1)
                 q.append(a_1)
@@ -30,6 +31,7 @@ def bfs():
         if a_2 not in visited and sum(a_2) < n + 1:
             if sum(a_2) == n:
                 ans += 1
+                visited.append(a_2)
             else:
                 visited.append(a_2)
                 q.append(a_2)
@@ -37,6 +39,7 @@ def bfs():
         if a_3 not in visited and sum(a_3) < n + 1:
             if sum(a_3) == n:
                 ans += 1
+                visited.append(a_3)
             else:
                 visited.append(a_3)
                 q.append(a_3)
@@ -77,3 +80,5 @@ for i in range(N):
 # 근데 이렇게 되면 1,2,1 이나 2,1,1 이나 같아지므로 얘는 패스
 # 그러면 스택에 넣어서 sort를 계속 해주는식으로?
 # 그러면 같은 경우의 수는 일단 지워지긴할텐데 매번 sort가 되나
+
+# 는 해결했는데 시간초과..
