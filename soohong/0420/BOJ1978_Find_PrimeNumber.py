@@ -9,7 +9,7 @@ numbers = list(map(int, input().split()))
 result = []
 
 for number in numbers:
-    for i in range(2,number):
+    for i in range(2 , number // 2 + 1):
         if number % i == 0: # 정확하게 나눠 떨어지면?
             result.append(number)
             break
@@ -20,3 +20,5 @@ if 1 in numbers:
     print(total)
 else:
     print(total)
+
+

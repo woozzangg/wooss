@@ -14,7 +14,7 @@ for a in A:
         students -= B
         cnt += 1
         if students%C > 0: # 부감독관이 있고 그 이후로 나머지가 있는 경우
-            cnt += (students//C) +1 # 1을 더해줌 나머지만큼
+            cnt += (students//C) + 1 # 1을 더해줌 나머지만큼
         else: # 부감독관이 딱 떨어지는 경우
             cnt += (students//C)  #몫을 넣어줌 +
 

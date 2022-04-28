@@ -2,7 +2,6 @@ import sys
 sys.stdin= open('input.txt')
 from collections import deque
 
-
 def BFS(point, cnt, num):
     di, dj = [1, -1, 0, 0], [0,0,1,-1]
     q = deque()
@@ -20,9 +19,6 @@ def BFS(point, cnt, num):
                     cnt += 1
     result.append(cnt)
 
-
-
-
 # 기본 입력
 N = int(input())
 maps = [list(map(int, input())) for _ in range(N)]
@@ -36,7 +32,6 @@ for i in range(N):
             cnt = 1
             BFS((i,j), cnt, num)
             num += 1
-
 
 result.sort()
 print(len(result))

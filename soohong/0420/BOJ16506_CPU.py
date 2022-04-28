@@ -26,6 +26,7 @@ for word in words:
 
     result = ''
     flag = 0
+
     if word[0][-1] == 'C': # 마지막 글자가 C이면
         word[0] = word[0][:-1] # C를 잘라줌
         flag = 1
@@ -33,11 +34,13 @@ for word in words:
         result += opcodes[word[0]]+'10' # opcode 값과 항상 0인 값 넣어줌
     else:
         result += opcodes[word[0]]+'00'
+
     # rD 이진수 변환
     rD =  str(bin(int(rD)))[2:]
     if len(rD) < 3:
         rD = '0'*(3-len(rD)) + rD
     result += rD
+
     # rA 이진수 변환 0일 때 처리
     if rA != '0':
         rA = str(bin(int(rA)))[2:]
@@ -47,7 +50,6 @@ for word in words:
     else:
         result += '000'
     # rA 글자수가 모자랄경우
-
 
     # rB or C 처리,
     if flag == 0: # rB사용

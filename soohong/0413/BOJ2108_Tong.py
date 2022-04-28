@@ -11,6 +11,7 @@ def fre():
         for n in range(len(num)):
             if a == num[n]:
                 cnt[n] += 1
+
     max_cnt = max(cnt)
     index_cnt = 1
     if cnt.count(max_cnt) > 1:  # 여러개면
