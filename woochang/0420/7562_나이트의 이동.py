@@ -3,6 +3,7 @@ sys.stdin = open('7562input.txt')
 from collections import deque
 
 def bfs():
+    global visited
     dt = [[-2,1],[-2,-1],[-1,2],[-1,-2],[1,2],[1,-2],[2,1],[2,-1]]
     cnt = 0
     visited = []
@@ -15,7 +16,7 @@ def bfs():
         s = q.popleft()
         for d in dt:
             dx, dy = s[0]+d[0] ,s[1]+d[1]
-            if 0<=dx<N and 0<=dy<N and [dx,dy,s[2]+1] not in q and (dx,dy) not in visited:
+            if 0<=dx<N and 0<=dy<N and (dx,dy) not in visited:
                 if dx == e_1 and dy == e_2:
                     return s[2]+1
 

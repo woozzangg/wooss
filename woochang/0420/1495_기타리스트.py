@@ -27,7 +27,8 @@ for i in range(1,N):
     dp(a,V[i],i)
 
 ans_list = v_list[N-1]
-if len(ans_list) >0:
+# print(v_list)
+if ans_list[-1] == M:
     print(max(ans_list))
 else:
     print(-1)
