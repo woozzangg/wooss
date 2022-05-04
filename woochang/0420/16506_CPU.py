@@ -20,7 +20,6 @@ def thre(z):
     return a, b, c
 
 
-
 N = int(input())
 for tc in range(N):
     arr = list(map(str, input().split()))
