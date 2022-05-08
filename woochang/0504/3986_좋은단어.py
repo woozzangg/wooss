@@ -6,7 +6,7 @@ def archi():
     global total_ans
     # k = len(lis)
     c = -1
-    while  len(lis) %2 ==0 and len(lis) > 0:
+    while  len(lis) %2 ==0 and len(lis) >=2 :
         c += 1
         if lis[0] == lis[len(lis)-1]:
             del lis[len(lis)-1]
@@ -17,7 +17,7 @@ def archi():
         elif lis[c] == lis[c + 1]:
             del lis[c + 1]
             del lis[c]
-            c = -1
+            c -= 2
 
 
     if len(lis) == 0:
