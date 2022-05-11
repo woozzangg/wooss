@@ -15,9 +15,9 @@ def find_scale():
              'descending',
              'mixed']
     result = ''
-    if numbers[0] < numbers[1]:
+    if numbers[0] < numbers[1]: # ascending
         result = scale[0]
-    elif numbers[0] > numbers[1]:
+    elif numbers[0] > numbers[1]: # descending
         result = scale[1]
     else:
         result = scale[2]

@@ -3,10 +3,12 @@ sys.stdin = open('input.txt')
 
 
 mo_list = ['a', 'e', 'o', 'u', 'i']
+
 def IsMo(password):
     for aeiou in mo_list:
         if aeiou in password:
             return 1
+
 def Double(password):
     for i in range(len(password) - 1):
         if password[i] == password[i+1]:
@@ -14,6 +16,7 @@ def Double(password):
                 pass
             else:
                 return 1
+
 def Triple(password):
     mo = 0
     ja = 0
