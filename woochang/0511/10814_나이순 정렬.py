@@ -10,7 +10,7 @@ for i in range(N):
     fn_list.append(a)
     if a[1] == ' ':
         age_list.append(int(a[0]))
-    elif a[1] == ' ':
+    elif a[2] == ' ':
         age_list.append(int(a[0:1]))
     else:
         age_list.append(int(a[0:2]))

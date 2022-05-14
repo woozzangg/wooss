@@ -1,5 +1,6 @@
 import sys
 sys.stdin = open('1764input.txt')
+import
 
 N, M = map(int, input().split())
 d_list = []

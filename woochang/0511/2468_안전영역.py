@@ -2,7 +2,6 @@ import sys
 sys.stdin = open('2468input.txt')
 from collections import deque
 
-
 def bfs(a,b):
     global max_safe
     dt = [[1,0],[-1,0],[0,1],[0,-1]]
@@ -15,14 +14,6 @@ def bfs(a,b):
             if 0 <= nx < N and 0 <= ny < N and new_arr[nx][ny] != 0 and visited[nx][ny] ==0:
                 q.append([nx,ny])
                 visited[nx][ny] = 2
-
-
-
-
-
-
-
-
 
 N = int(input())
 arr = [list(map(int, input().split())) for _ in range(N)]
