@@ -35,7 +35,7 @@ def Clean():
                 continue
             else:
                 direction = left # 청소했을경우 방향만 왼쪽으로 변경
-            cnt += 1 # 2a의 영역이 실행되었을경우 cnt해줌
+                cnt += 1 # 2a의 영역이 실행되었을경우 cnt해줌
 
         if cnt == 4:
             bi, bj = row - di[direction] , col - dj[direction] # 내 뒤쪽에 있는 애들
