@@ -3,7 +3,7 @@ sys.stdin = open('1620_input.txt')
 input = sys.stdin.readline
 # n, m = map(int, input().split())
 # pokemon = []
-
+#
 # for _ in range(n):
 #     pokemon.append(input().strip())
 # for _ in range(m):
