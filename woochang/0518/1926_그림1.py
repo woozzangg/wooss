@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('1743input.txt')
+sys.stdin = open('1926input.txt')
 from collections import deque
 
 def bfs():
@@ -23,13 +23,22 @@ def bfs():
                     max_trash = p
 
 
-N, M, K = map(int,input().split())
-arr = [[0 for _ in range(M)] for _ in range(N)]
+N, M = map(int,input().split())
+# arr = [[0 for _ in range(M)] for _ in range(N)]
+arr = [list(map(int, input().split())) for _ in range(N)]
 
-for i in range(K):
-    j, k = map(int, input().split())
-    arr[j-1][k-1] = 1
+
+# for i in range(K):
+#     j, k = map(int, input().split())
+#     arr[j-1][k-1] = 1
 visited = [[0 for _ in range(M)] for _ in range(N)]
 max_trash = 0
 bfs()
+cnt = 0
+for i in range(N):
+    for j in range(M):
+        if visited[i][j] == 1:
+            cnt += 1
+print(cnt)
+
 print(max_trash)
