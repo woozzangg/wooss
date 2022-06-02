@@ -14,7 +14,6 @@ def isPalindrom(number):
             end -= 1
     return 1
 
-
 while True:
     number = input()
     if number == '0':

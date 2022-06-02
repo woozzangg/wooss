@@ -10,11 +10,11 @@ for _ in range(N):
     if num == 0:
         if len(max_heap) == 0:
             print('0')
-            # print(max_heap)
+            print(max_heap)
         else:
             print(-heapq.heappop(max_heap))
-            # print(max_heap)
+            print(max_heap)
     else:
         heapq.heappush(max_heap, -num)
-        # print(max_heap)
+        print(max_heap)
 

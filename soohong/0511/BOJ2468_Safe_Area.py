@@ -19,7 +19,6 @@ N = int(input())
 area = [list(map(int, input().split())) for _ in range(N)]
 result = []
 
-
 # 비는 최대값의 -1만큼 돌려주려고 Find maxnum
 M = 0
 for i in range(N):
@@ -40,7 +39,7 @@ for m in range(M): # m == 장마의 높이
                 visited[i][j] = cnt
                 DFS((i, j) , cnt)
     result.append(cnt)
-
+    print(visited)
 if result:
     print(max(result)-1)
 else:

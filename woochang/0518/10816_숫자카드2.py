@@ -16,4 +16,4 @@ M_list = list(map(int ,input().split()))
 M_index = [0]*M
 for i in range(len(M_list)):
     M_index[i] = N_list.count(M_list[i])
-print(M_index)
+print(*M_index)
