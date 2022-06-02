@@ -25,3 +25,4 @@ elif 100 <= N < 1000:
     print(cnt)
 elif N == 1000:
     print(144)
+
