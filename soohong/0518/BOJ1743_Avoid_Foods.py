@@ -18,16 +18,13 @@ def BFS(point):
                     cnt += 1
     return cnt
 
-
 N, M, K = map(int, input().split())
 matrix = [[ 0 for _ in range(M)] for _ in range(N)]
 visited = [[0 for _ in range(M)] for _ in range(N)]
 
-
 for _ in range(K):
     i, j = map(int, input().split())
     matrix[i-1][j-1] = 1
-
 
 results = []
 for k1 in range(N):
@@ -35,5 +32,4 @@ for k1 in range(N):
         if matrix[k1][k2] == 1 and visited[k1][k2] == 0:
             visited = [[0 for _ in range(M)] for _ in range(N)]
             results.append(BFS((k1, k2)))
-
 print(max(results))

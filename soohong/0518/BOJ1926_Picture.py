@@ -8,7 +8,6 @@ def BFS(point):
     q.append(point)
     cnt = 1
     while q:
-
         row, col = q.popleft()
         for i in range(4):
             ni, nj = row + di[i], col + dj[i]
@@ -17,8 +16,6 @@ def BFS(point):
                     q.append((ni, nj))
                     cnt += 1
                     visited[ni][nj] = 1
-
-
     return cnt
 
 

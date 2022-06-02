@@ -12,6 +12,7 @@ result = []
 while q:
     q.rotate(-(K-1))
     result.append(q.popleft())
+
 print('<', end='')
 print(*result, sep=', ', end='')
 print('>', end='')

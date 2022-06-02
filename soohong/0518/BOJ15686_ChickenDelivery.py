@@ -2,7 +2,6 @@ import sys
 sys.stdin = open('input.txt')
 
 # 1은 집 2 는 치킨집
-
 N, M = map(int, input().split())
 city = [list(map(int, input().split())) for _ in range(N)]
 
