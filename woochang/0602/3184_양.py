@@ -24,7 +24,6 @@ def bfs(a,b):
                     wolf_cnt += 1
 
 
-
 r, c = map(int, input().split())
 arr = list(str(input()) for _ in range(r))
 sheep_cnt = 0
