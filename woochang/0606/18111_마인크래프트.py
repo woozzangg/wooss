@@ -7,6 +7,7 @@ def mine():
     for a in range(N):
         for b in range(M):
             if a == i and b == j:
+
                 pass
             elif arr[i][j] > arr[a][b]:
                 K = arr[i][j] - arr[a][b]
@@ -39,16 +40,16 @@ for i in range(N):
         else:
             visited[i][j] = True
             mine()
-            # if height > height_max:
-            #     height_max = height
-            #     time_max = time
-            #     height = 0
-            #     time = 0
-            if time < time_min:
-                time_min = time
+            if height > height_max:
                 height_max = height
+                time_max = time
                 height = 0
                 time = 0
+            # if time < time_min:
+            #     time_min = time
+            #     height_max = height
+            #     height = 0
+            #     time = 0
 
 
 
@@ -59,9 +60,9 @@ print(time_min ,height_max)
 
 # 블록 제거는 2초 / 블록 추가는 1초 ( 인벤토리에 블록이 있어야됨)
 # 블록 배치가 만약에
-# 3 4 5 6
-# 7 8 9 10
-# 11 12 13 14
+# 33 4 5 66
+# 71 8 92 10
+# 119 12 130 14
 # 이런식으로 있으면 어디에 초점을 맞춰야되지
 # 인벤토리가 얼마냐 있냐에 따라 나뉘겟는데
 # 한 곳마다 중심 높이로 두고 완탐 돌려야되는듯

@@ -3,7 +3,7 @@ input = sys.stdin.readline
 N=int(input())
 cnt = 0
 ans = 0
-for i in range(9876543210):
+for i in range(9876543211):
     K = str(i)
     k_list = []
     if N == cnt:

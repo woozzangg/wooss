@@ -4,7 +4,7 @@ sys.stdin = open('1912input.txt')
 N = int(input())
 arr = list(map(int, input().split()))
 ans = -1000
-# res = [0] * N
+res = [0] * N
 
 
 # for i in range(0, N):
@@ -35,11 +35,12 @@ print(ans)
 
 # n = int(input())
 
-# arr = list(map(int, input().split()))
-# dp = [0] * len(arr)
-# dp[0] = arr[0]
-#
-# for i in range(1, len(arr)):
-#     dp[i] = max(arr[i], dp[i-1] + arr[i])
-#
-# print(max(dp))
+arr = list(map(int, input().split()))
+dp = [0] * len(arr)
+dp[0] = arr[0]
+
+for i in range(1, len(arr)):
+    dp[i] = max(arr[i], dp[i-1] + arr[i])
+
+print(max(dp))
+
