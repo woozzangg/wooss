@@ -10,7 +10,7 @@ for i in range(1, num+1):
 result = []
 while q:
     if len(q) == 1: # 만약 큐가 딱 하나 남았으면 추가하고 종료 (q가 1번 남았을경우 pop 2번 못함)
-        result.append(q.popleft())
+        result.append(q.pop())
         break
     else: # 아니라면 반복적 실행
         result.append(q.popleft())
