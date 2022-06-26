@@ -36,7 +36,7 @@ def bfs(x, y, ns, nw):
             ny = y + dy[i]
             if nx<0 or ny<0 or nx>=r or ny>= c:
                 continue
-            if arr[nx][ny]=='#' or visited[nx][ny]==True:
+            if arr[nx][ny] == '#' or visited[nx][ny]==True:
                 continue
             visited[nx][ny] = True
             if arr[nx][ny] == 'v':

@@ -2,7 +2,6 @@ import sys
 sys.stdin = open('input1.txt')
 from collections import deque
 
-
 def BFS():
     cnt = 1
     while q:
