@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input2.txt')
+sys.stdin = open('input1.txt')
 from collections import deque
 input = sys.stdin.readline
 
