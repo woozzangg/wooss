@@ -1,26 +1,35 @@
 import sys
 sys.stdin = open("input1.txt")
+sys.setrecursionlimit(10000000)
+input = sys.stdin.readline
 
-def dfs(graph, v, visited):
-    visited[v] = True
-    print(v)
+def dfs(R):
+    global cnt
+    visited[R] = True
 
-    for i in graph[v]:
-        if not visited[i]:
-            dfs(graph, i, visited)
-
-
+    for i in arr[R]:
+        if visited[i] == False:
+            cnt += 1
+            ans[i] = cnt
+            dfs(i)
 
 N, M, R = map(int, input().split())
-arr = [[] for _ in range(M+1)]
-for i in range(1, M+1):
+arr = [[] for _ in range(N+1)]
+for _ in range(M):
     a, b = map(int, input().split())
-    arr[b].append(a)
     arr[a].append(b)
-arr.sort(reverse=False)
+    arr[b].append(a)
 
-visited = [False] * (M+1)
+for i in arr:
+    i.sort()
+
+visited = [False] * (N+1)
+ans = [0 for _ in range(N+1)]
 # print(arr)
-dfs(arr, 1, visited)
+cnt = 1
+ans[R] = cnt
+dfs(R)
+for i in range(1, N+1):
+    print(ans[i])
 
 

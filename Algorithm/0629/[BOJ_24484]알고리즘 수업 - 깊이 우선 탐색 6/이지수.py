@@ -3,16 +3,16 @@ sys.stdin = open("input1.txt")
 sys.setrecursionlimit(1000000)
 input = sys.stdin.readline
 
-def dfs(R):
+def dfs(R, depth):
     global cnt
-    visited[R] = True
+    visited[R] = depth
 
     for i in arr[R]:
-        if visited[i] == False:
+        if visited[i] == -1:
             cnt += 1
-            ans[i] = cnt
-            dfs(i)
-
+            order[i] = cnt
+            dfs(i, depth+1)
+    return
 
 N, M, R = map(int, input().split())
 arr = [[] for _ in range(N+1)]
@@ -23,11 +23,14 @@ for _ in range(M):
 
 for i in arr:
     i.sort(reverse=True)
-# print(arr)
-visited = [False] * (N+1)
-ans = [0] * (N+1)
+
 cnt = 1
-ans[R] = cnt
-dfs(R)
+visited = [-1] * (N+1)
+order = [0] * (N+1)
+order[R] = cnt
+dfs(R, 0)
+
+result = 0
 for i in range(1, N+1):
-    print(ans[i])
+    result += order[i] * visited[i]
+print(result)
