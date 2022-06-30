@@ -3,7 +3,7 @@ sys.stdin = open('input1.txt')
 from collections import deque
 input = sys.stdin.readline
 
-def bfs(R):
+def bfs():
     q = deque([R])
     visited = [False for _ in range(N+1)]
     visited[R] = True
@@ -28,6 +28,6 @@ ans = [0 for _ in range(N+1)]
 for i in range(1,len(ans)):
     arr[i].sort(reverse=True)
 ans[R] = 1
-bfs(R)
+bfs()
 for i in range(1,len(ans)):
     print(ans[i])
