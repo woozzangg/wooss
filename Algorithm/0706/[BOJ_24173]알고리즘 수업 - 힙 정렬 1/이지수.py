@@ -1,7 +1,8 @@
 import heapq, sys
 sys.stdin = open('input1.txt')
 N, K = map(int, input().split())
-A = list(map(int, input().split()))
+A = [0] + list(map(int, input().split()))
+
 ans = []
 cnt = 0
 
@@ -36,4 +37,4 @@ heap_sort(A)
 if cnt < K:
     print(-1)
 else:
-    print(*ans[K])
+    print(ans)
