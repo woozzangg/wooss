@@ -15,6 +15,7 @@ while q:
     if count == n:
         print(now_num) # 현재 숫자를 출력하고
         exit() # 프로그램 강제 종료
+        
     for i in range(now_num % 10):
         q.append(now_num * 10 + i)
 

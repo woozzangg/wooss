@@ -8,7 +8,6 @@ def BFS(start):
         now = q.popleft()
         for i in range(len(connect[now])):
             if visited[connect[now][i]] == 0:
-                print(connect[now][i])
                 q.append(connect[now][i])
                 visited[connect[now][i]] = 1
 
@@ -18,6 +17,7 @@ N, M = map(int, input().split())
 connect = [[] for _ in range(N+1)] 
 visited = [0 for _ in range(N+1)]
 q = deque()
+
 for i in range(M):
     a, b = map(int, input().split())
     connect[a].append(b)

@@ -2,10 +2,9 @@ import sys
 sys.stdin = open('input.txt')
 from collections import deque
 
-def BFS(yang_point, o, v):
-    q.append(yang_point)
-    global visited
-    global result_sheep, result_wolf
+def BFS(point, o, v):
+    q.append(point)
+    global result_sheep, result_wolf, visited
     sheep, wolf = o, v
     while q:
         row, col = q.popleft()
@@ -38,7 +37,8 @@ for i in range(R):
     for j in range(C):
         if madang[i][j] == 'o' and visited[i][j] == 0 :
             BFS((i, j), 1, 0)
-        elif madang[i][j] == 'v' and visited[i][j] == 0:
+        elif madang[i][j] == 'v' and  visited[i][j] == 0:
             BFS((i, j), 0, 1)
+
 
 print(result_sheep, result_wolf)
