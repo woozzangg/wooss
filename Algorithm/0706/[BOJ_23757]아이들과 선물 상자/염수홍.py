@@ -20,7 +20,6 @@ present = [] # 선물을 담을 배열
 temps = list(map(int, input().split()))
 for temp in temps:
     heapq.heappush(present, -temp) # 선물 최대힙으로 구현, 많은 순으로 정렬
-
 children = list(map(int, input().split())) # 아이들
 
 print(Pickpresent())
