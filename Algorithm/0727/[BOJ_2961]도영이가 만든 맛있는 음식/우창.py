@@ -1,7 +1,9 @@
 import sys
-sys.stdin = open('input4.txt')
+sys.stdin = open('input3.txt')
 
-def combi(n, ans):
+from itertools import combinations
+# [[(1),(2),(3),(4)],[(1,2),(1,3),(1,4),(2,3),(2,4),(3,4),(1,2,3) ...]]
+def combi(n, ans): # 조합
     if n == len(nums):
         temp = [i for i in ans]
         answer_list.append(temp)
@@ -21,7 +23,7 @@ for i in range(1,N+1):
     nums.append(i)
 
 answer_list = []
-combi(0, [])
+combi(0, []) #조합
 answer_list.pop()
 
 answ = 999999
