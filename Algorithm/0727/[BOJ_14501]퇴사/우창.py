@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input6.txt')
+sys.stdin = open('input1.txt')
 
 
 # N = int(input())
@@ -42,8 +42,8 @@ for i in range(N-1,-1,-1):
                 summ += arr[i+j][1]  # 더한것들 summ 으로 만들어줌
             if kk >= summ:           # 더한것들보다 금액이 크면
                 max_b += kk-summ     # ans 에서 금액은 더하고 (더한것들)은 빼주고
-                for j in range(1,k):
-                    arr[i+j][1] = 0  # 그리고 뒤에 더한것들을 나중에 안헤깔리게 0으로 바꿔줘버리기
+                # for j in range(1,k):
+                #     arr[i+j][1] = 0  # 그리고 뒤에 더한것들을 나중에 안헤깔리게 0으로 바꿔줘버리기
             else:
                 arr[i][1] = 0      # 근데 작다면 그냥 0으로 바꿈
 print(max_b)

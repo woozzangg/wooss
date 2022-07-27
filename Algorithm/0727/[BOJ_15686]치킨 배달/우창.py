@@ -57,8 +57,9 @@ for chi in combinations(chick, m):  # m개의 치킨집 선택
 
 print(result)
 kkk = []
-for i in range(1,m):
-    kk = list(combinations(chick,m))
-    kkk.append(kk)
+m=3
+kk = combinations(chick,m)
+kk = list(kk)
+kkk.append(kk)
 print(kkk)
 
