@@ -3,7 +3,7 @@ sys.stdin = open('input1.txt')
 
 def omok(k,a,b):
     global ans, c, d
-    if a < 14:
+    if a <= 14: # 6시 방향
         if arr[a+1][b] == k:
             if arr[a+2][b] == k:
                 if arr[a+3][b] == k:
@@ -20,21 +20,22 @@ def omok(k,a,b):
                             d = b
                             return
 
-    if arr[a][b+1] == k:
-        if arr[a][b+2] == k:
-            if arr[a][b+3] == k:
-                if arr[a][b+4] == k:
-                    if b == 0 and arr[a][b+5] != k:
-                        ans = k
-                        c = a
-                        d = b
-                        return
-                    elif arr[a][b+5] != k and arr[a][b-1] != k :
-                        ans = k
-                        c = a
-                        d = b
-                        return
-    if a < 14:
+    if b <= 14:
+        if arr[a][b+1] == k: # 3시 방향
+            if arr[a][b+2] == k:
+                if arr[a][b+3] == k:
+                    if arr[a][b+4] == k:
+                        if b == 0 and arr[a][b+5] != k:
+                            ans = k
+                            c = a
+                            d = b
+                            return
+                        elif arr[a][b+5] != k and arr[a][b-1] != k :
+                            ans = k
+                            c = a
+                            d = b
+                            return
+    if a <= 14 and b <= 14: # 5시 방향
         if arr[a+1][b+1] == k:
             if arr[a+2][b+2] == k:
                 if arr[a+3][b+3] == k:
@@ -57,7 +58,7 @@ def omok(k,a,b):
                             c = a
                             d = b
                             return
-    if a>3:
+    if a>3:  # 1시 방향
         if arr[a - 1][b + 1] == k:
             if arr[a - 2][b + 2] == k:
                 if arr[a - 3][b + 3] == k:
@@ -67,7 +68,12 @@ def omok(k,a,b):
                             c = a
                             d = b
                             return
-                        elif arr[a - 5][b + 5] != k and arr[a + 1][b - 1] != k:
+                        elif arr[a - 5][b + 5] != k and arr[a + 1][b - 1] != k and b > 0:
+                            ans = k
+                            c = a
+                            d = b
+                            return
+                        elif arr[a - 5][b + 5] != k  and b == 0:
                             ans = k
                             c = a
                             d = b
@@ -82,7 +88,7 @@ ans = 0
 c= 0
 d= 0
 for i in range(19):
-    for j in range(15):
+    for j in range(19):
         if arr[i][j] == 1:
             k = 1
             omok(k,i,j)
