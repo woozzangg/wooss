@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input3.txt')
+sys.stdin = open('input2.txt')
 
 def Consult(today, lastest_money):
     # 건너 뛰어야 하는 날짜를 의미함ㅁ
@@ -8,8 +8,6 @@ def Consult(today, lastest_money):
         return
     dp[today + jump_date] = max(dp[today + jump_date], P[today] + lastest_money)
     Consult(today + jump_date + 1, dp[today + jump_date])
-
-
 
 N = int(input())
 T = [] # 상담 기간
