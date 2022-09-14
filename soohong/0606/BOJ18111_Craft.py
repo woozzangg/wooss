@@ -12,10 +12,12 @@ def newLevel():
                     temp -= goal - new_ground[i][j]
                     sec += 1 * (goal - new_ground[i][j])
                     new_ground[i][j] = goal
+
                 elif new_ground[i][j] > goal:
                     temp += new_ground[i][j] - goal
                     sec += 2 * (new_ground[i][j] - goal)
                     new_ground[i][j] = goal
+                    
                 else: # 같으면 아무것도 안해도 됨
                     pass
         if temp >= 0: # 음수이면 추가할 수 없음
